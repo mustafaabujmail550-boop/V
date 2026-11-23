@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="es" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -406,31 +406,66 @@ function phone(render){
   return {root,paint};
 }
 
+/* ---------- Demo translations ---------- */
+const DM={
+es:{cur:'JOD',hi:'Bienvenido',all:'Todo',ttl:'Finalizar pedido',empty:'El carrito está vacío',browse:'Volver a explorar',payT:'Método de pago',cash:'Efectivo al recibir',online:'Pago online',tot:'Total',view:'Ver carrito',ord:'Pedido #',neu:'Nuevo pedido',shop:'Comprar ahora',
+ aria:['Quitar','Añadir','Volver','Carrito','Añadir','Mensaje'],
+ st:{cats:['Relojes','Bolsos','Perfumes'],hero:['Colección de temporada','Diseños sobrios<br>de calidad duradera'],cta:'Confirmar pedido',dt:'Hemos recibido tu pedido',ds:'Te escribiremos pronto con los detalles del envío',it:['Reloj clásico','Reloj deportivo','Bolso de cuero','Bolso de mano','Perfume de oud','Perfume de rosas']},
+ mn:{name:'Restaurante Al Diwan',tag:'Mesa 7',cats:['Principales','Entrantes','Bebidas'],note:'Tu pedido llegará directamente a la cocina',cta:'Enviar pedido',dt:'Tu pedido está en camino',ds:'Tiempo estimado: 12 minutos',
+  it:[['Hamburguesa Angus','Carne Angus, queso cheddar y salsa especial'],['Pollo a la parrilla','Hierbas frescas con verduras de temporada'],['Pasta cremosa','Salsa de nata y champiñones'],['Hummus con tahini','Aceite de oliva virgen'],['Ensalada César','Lechuga romana y parmesano'],['Café de especialidad','Tostado local'],['Zumo de naranja','Natural, sin azúcar']]},
+ si:{works:['Identidad de cafetería','Tienda de moda','App de reservas','Menú digital'],svc:[['Identidad visual completa','Desde 150 JOD'],['Diseño de interfaces','Desde 220 JOD'],['Gestión de contenido','Desde 90 JOD']],ct:['WhatsApp','Instagram','Correo'],name:'Layan Al-Khatib',av:'L',role:'Diseñadora de identidad visual · Amán',stats:['proyectos','años','valoración'],cta:'Reservar consulta',tabs:['Trabajos','Servicios','Contacto']}},
+ar:{cur:'د.أ',hi:'أهلاً بك',all:'الكل',ttl:'إتمام الطلب',empty:'السلة فارغة',browse:'العودة للتصفح',payT:'طريقة الدفع',cash:'كاش عند الاستلام',online:'دفع أونلاين',tot:'الإجمالي',view:'عرض السلة',ord:'طلب #',neu:'طلب جديد',shop:'تسوّق الآن',
+ aria:['إنقاص','زيادة','رجوع','السلة','أضف','رسالة'],
+ st:{cats:['ساعات','حقائب','عطور'],hero:['مجموعة الموسم','تصاميم هادئة<br>بجودة تدوم'],cta:'تأكيد الطلب',dt:'تم استلام طلبك',ds:'سنراسلك بتفاصيل الشحن قريباً',it:['ساعة كلاسيك','ساعة رياضية','حقيبة جلدية','حقيبة يد','عطر العود','عطر الورد']},
+ mn:{name:'مطعم الديوان',tag:'طاولة 7',cats:['الرئيسية','المقبلات','المشروبات'],note:'سيصل طلبك إلى المطبخ مباشرة',cta:'إرسال الطلب',dt:'طلبك في الطريق',ds:'الوقت المتوقع 12 دقيقة',
+  it:[['برجر أنجوس','لحم أنجوس وجبنة شيدر وصوص خاص'],['دجاج مشوي','أعشاب طازجة مع خضار موسمية'],['باستا كريمي','صوص كريمة وفطر'],['حمص بالطحينة','زيت زيتون بكر'],['سلطة سيزر','خس رومي وجبن بارميزان'],['قهوة مختصة','تحميص محلي'],['عصير برتقال','طازج بدون سكر']]},
+ si:{works:['هوية مقهى','متجر أزياء','تطبيق حجز','منيو رقمي'],svc:[['هوية بصرية متكاملة','من 150 د.أ'],['تصميم واجهات','من 220 د.أ'],['إدارة المحتوى','من 90 د.أ']],ct:['واتساب','انستغرام','البريد'],name:'ليان الخطيب',av:'ل',role:'مصممة هوية بصرية · عمّان',stats:['مشروع','سنوات','تقييم'],cta:'احجز استشارة',tabs:['الأعمال','الخدمات','تواصل']}},
+en:{cur:'JOD',hi:'Welcome',all:'All',ttl:'Checkout',empty:'Your cart is empty',browse:'Back to browsing',payT:'Payment method',cash:'Cash on delivery',online:'Pay online',tot:'Total',view:'View cart',ord:'Order #',neu:'New order',shop:'Shop now',
+ aria:['Remove','Add','Back','Cart','Add','Message'],
+ st:{cats:['Watches','Bags','Perfumes'],hero:['Seasonal collection','Understated designs<br>built to last'],cta:'Confirm order',dt:'We received your order',ds:'We’ll message you shipping details soon',it:['Classic watch','Sport watch','Leather bag','Handbag','Oud perfume','Rose perfume']},
+ mn:{name:'Al Diwan Restaurant',tag:'Table 7',cats:['Mains','Starters','Drinks'],note:'Your order goes straight to the kitchen',cta:'Send order',dt:'Your order is on its way',ds:'Estimated time: 12 minutes',
+  it:[['Angus Burger','Angus beef, cheddar and special sauce'],['Grilled Chicken','Fresh herbs with seasonal vegetables'],['Creamy Pasta','Cream sauce and mushrooms'],['Hummus with Tahini','Extra virgin olive oil'],['Caesar Salad','Romaine lettuce and parmesan'],['Specialty Coffee','Locally roasted'],['Orange Juice','Fresh, no added sugar']]},
+ si:{works:['Café branding','Fashion store','Booking app','Digital menu'],svc:[['Complete visual identity','From 150 JOD'],['Interface design','From 220 JOD'],['Content management','From 90 JOD']],ct:['WhatsApp','Instagram','Email'],name:'Layan Al-Khatib',av:'L',role:'Brand identity designer · Amman',stats:['projects','years','rating'],cta:'Book a consultation',tabs:['Work','Services','Contact']}},
+de:{cur:'JOD',hi:'Willkommen',all:'Alle',ttl:'Bestellung abschließen',empty:'Der Warenkorb ist leer',browse:'Zurück zum Stöbern',payT:'Zahlungsart',cash:'Barzahlung bei Lieferung',online:'Online bezahlen',tot:'Gesamt',view:'Warenkorb ansehen',ord:'Bestellung #',neu:'Neue Bestellung',shop:'Jetzt shoppen',
+ aria:['Entfernen','Hinzufügen','Zurück','Warenkorb','Hinzufügen','Nachricht'],
+ st:{cats:['Uhren','Taschen','Parfüms'],hero:['Saisonkollektion','Schlichtes Design<br>für lange Freude'],cta:'Bestellung bestätigen',dt:'Wir haben Ihre Bestellung erhalten',ds:'Die Versanddetails senden wir Ihnen in Kürze',it:['Klassische Uhr','Sportuhr','Ledertasche','Handtasche','Oud-Parfüm','Rosenparfüm']},
+ mn:{name:'Restaurant Al Diwan',tag:'Tisch 7',cats:['Hauptgerichte','Vorspeisen','Getränke'],note:'Ihre Bestellung geht direkt an die Küche',cta:'Bestellung senden',dt:'Ihre Bestellung ist unterwegs',ds:'Voraussichtliche Zeit: 12 Minuten',
+  it:[['Angus-Burger','Angus-Rind, Cheddar und Spezialsoße'],['Gegrilltes Hähnchen','Frische Kräuter mit Saisongemüse'],['Cremige Pasta','Sahnesoße mit Champignons'],['Hummus mit Tahini','Natives Olivenöl extra'],['Caesar Salad','Romanasalat und Parmesan'],['Spezialitätenkaffee','Lokal geröstet'],['Orangensaft','Frisch, ohne Zucker']]},
+ si:{works:['Café-Branding','Modeshop','Buchungs-App','Digitale Speisekarte'],svc:[['Komplette visuelle Identität','Ab 150 JOD'],['Interface-Design','Ab 220 JOD'],['Content-Management','Ab 90 JOD']],ct:['WhatsApp','Instagram','E-Mail'],name:'Layan Al-Khatib',av:'L',role:'Designerin für visuelle Identität · Amman',stats:['Projekte','Jahre','Bewertung'],cta:'Beratung buchen',tabs:['Arbeiten','Leistungen','Kontakt']}},
+fr:{cur:'JOD',hi:'Bienvenue',all:'Tout',ttl:'Finaliser la commande',empty:'Le panier est vide',browse:'Retour à la boutique',payT:'Mode de paiement',cash:'Espèces à la livraison',online:'Paiement en ligne',tot:'Total',view:'Voir le panier',ord:'Commande #',neu:'Nouvelle commande',shop:'Acheter',
+ aria:['Retirer','Ajouter','Retour','Panier','Ajouter','Message'],
+ st:{cats:['Montres','Sacs','Parfums'],hero:['Collection de saison','Des designs sobres<br>faits pour durer'],cta:'Confirmer la commande',dt:'Nous avons reçu votre commande',ds:'Nous vous écrirons bientôt avec les détails de livraison',it:['Montre classique','Montre sport','Sac en cuir','Sac à main','Parfum oud','Parfum rose']},
+ mn:{name:'Restaurant Al Diwan',tag:'Table 7',cats:['Plats','Entrées','Boissons'],note:'Votre commande arrive directement en cuisine',cta:'Envoyer la commande',dt:'Votre commande est en route',ds:'Temps estimé : 12 minutes',
+  it:[['Burger Angus','Bœuf Angus, cheddar et sauce spéciale'],['Poulet grillé','Herbes fraîches et légumes de saison'],['Pâtes crémeuses','Sauce crème et champignons'],['Houmous au tahini','Huile d’olive vierge'],['Salade César','Romaine et parmesan'],['Café de spécialité','Torréfaction locale'],['Jus d’orange','Frais, sans sucre']]},
+ si:{works:['Identité de café','Boutique de mode','App de réservation','Menu numérique'],svc:[['Identité visuelle complète','À partir de 150 JOD'],['Design d’interfaces','À partir de 220 JOD'],['Gestion de contenu','À partir de 90 JOD']],ct:['WhatsApp','Instagram','E-mail'],name:'Layan Al-Khatib',av:'L',role:'Designer d’identité visuelle · Amman',stats:['projets','ans','note'],cta:'Réserver une consultation',tabs:['Réalisations','Services','Contact']}}
+};
+const dm=()=>DM[document.documentElement.lang]||DM.es;
+
 function shopDemo(c){
-  const cats=c.all?['الكل',...c.cats]:c.cats;
-  let cat=cats[0],cart={},view='shop',pay='cash',bump=false;
+  const D=dm(),keys=(c.all?['all']:[]).concat(c.cats.map((_,i)=>String(i)));
+  let cat=keys[0],cart={},view='shop',pay='cash',bump=false;
   const n=()=>Object.values(cart).reduce((a,b)=>a+b,0);
   const tot=()=>c.items.reduce((a,i)=>a+(cart[i[0]]||0)*i[3],0);
-  const P=v=>(+v.toFixed(2))+' '+c.cur;
+  const P=v=>(+v.toFixed(2))+' '+D.cur;
   function render(){
     const N=n();
-    if(view==='done')return{bar:null,body:`<div class="done"><div class="ring"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><p class="m-title" style="margin-top:18px">${c.doneT}</p><p class="m-d" style="margin-top:4px">${c.doneS}</p><span class="m-chip" style="margin-top:16px">طلب #2048</span><button class="m-ghost" style="margin-top:22px" data-reset>طلب جديد</button></div>`};
+    if(view==='done')return{bar:null,body:`<div class="done"><div class="ring"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><p class="m-title" style="margin-top:18px">${c.doneT}</p><p class="m-d" style="margin-top:4px">${c.doneS}</p><span class="m-chip" style="margin-top:16px">${D.ord}2048</span><button class="m-ghost" style="margin-top:22px" data-reset>${D.neu}</button></div>`};
     if(view==='checkout'){
       const L=c.items.filter(i=>cart[i[0]]);
-      const rows=L.length?L.map(i=>`<div class="m-line"><div class="tile xs${tone(i[6])}">${ic(i[5],16,1.5)}</div><div class="flex-1 min-w-0"><p class="m-n">${i[1]}</p><p class="m-d">${P(i[3])}</p></div><div class="step"><button data-dec="${i[0]}" aria-label="إنقاص">${ic('minus',12,2)}</button><span>${cart[i[0]]}</span><button data-inc="${i[0]}" aria-label="زيادة">${ic('plus',12,2)}</button></div></div>`).join('')
-        :`<div class="done" style="min-height:300px"><p class="m-d">السلة فارغة</p><button class="m-ghost" style="margin-top:12px" data-go="shop">العودة للتصفح</button></div>`;
-      const extra=L.length?(c.pay?`<p class="m-sub" style="margin:16px 0 8px">طريقة الدفع</p><div class="seg"><button data-pay="cash" class="${pay==='cash'?'on':''}">كاش عند الاستلام</button><button data-pay="online" class="${pay==='online'?'on':''}">دفع أونلاين</button></div>`:`<div class="m-note">${ic('check',14,2)}<span>${c.note}</span></div>`)+`<div class="m-sum"><span>الإجمالي</span><b>${P(tot())}</b></div>`:'';
+      const rows=L.length?L.map(i=>`<div class="m-line"><div class="tile xs${tone(i[6])}">${ic(i[5],16,1.5)}</div><div class="flex-1 min-w-0"><p class="m-n">${i[1]}</p><p class="m-d">${P(i[3])}</p></div><div class="step"><button data-dec="${i[0]}" aria-label="${D.aria[0]}">${ic('minus',12,2)}</button><span>${cart[i[0]]}</span><button data-inc="${i[0]}" aria-label="${D.aria[1]}">${ic('plus',12,2)}</button></div></div>`).join('')
+        :`<div class="done" style="min-height:300px"><p class="m-d">${D.empty}</p><button class="m-ghost" style="margin-top:12px" data-go="shop">${D.browse}</button></div>`;
+      const extra=L.length?(c.pay?`<p class="m-sub" style="margin:16px 0 8px">${D.payT}</p><div class="seg"><button data-pay="cash" class="${pay==='cash'?'on':''}">${D.cash}</button><button data-pay="online" class="${pay==='online'?'on':''}">${D.online}</button></div>`:`<div class="m-note">${ic('check',14,2)}<span>${c.note}</span></div>`)+`<div class="m-sum"><span>${D.tot}</span><b>${P(tot())}</b></div>`:'';
       return{bar:L.length?{n:N,label:c.cta,total:P(tot()),go:'confirm'}:null,
-        body:`<div class="flex items-center gap-2.5 pb-3"><button class="m-icon" data-go="shop" aria-label="رجوع">${ic('back',18)}</button><p class="m-title">إتمام الطلب</p></div>${rows}${extra}`};
+        body:`<div class="flex items-center gap-2.5 pb-3"><button class="m-icon" data-go="shop" aria-label="${D.aria[2]}">${ic('back',18)}</button><p class="m-title">${D.ttl}</p></div>${rows}${extra}`};
     }
-    const list=c.items.filter(i=>cat==='الكل'||i[4]===cat);
-    const top=`<div class="flex items-center justify-between pb-3"><div><p class="m-sub">${c.sub}</p><p class="m-title">${c.name}</p></div>${c.layout==='grid'?`<button class="m-icon" data-go="checkout" aria-label="السلة">${ic('bag',18)}${N?`<b class="badge${bump?' bump':''}">${N}</b>`:''}</button>`:`<span class="m-chip">${ic('grid',12,1.8)}${c.tag}</span>`}</div>`;
-    const hero=c.hero?`<div class="m-hero"><p class="m-sub" style="color:#E8B64C">${c.hero[0]}</p><p style="font-size:14px;font-weight:600;margin:4px 0 12px;line-height:1.55">${c.hero[1]}</p><button class="m-cta" style="height:32px" data-cat="${c.hero[2]}">تسوّق الآن</button></div>`:'';
-    const tabs=`<div class="m-tabs">${cats.map(k=>`<button data-cat="${k}" class="${k===cat?'on':''}">${k}</button>`).join('')}</div>`;
+    const list=c.items.filter(i=>cat==='all'||i[4]===cat);
+    const top=`<div class="flex items-center justify-between pb-3"><div><p class="m-sub">${D.hi}</p><p class="m-title">${c.name}</p></div>${c.layout==='grid'?`<button class="m-icon" data-go="checkout" aria-label="${D.aria[3]}">${ic('bag',18)}${N?`<b class="badge${bump?' bump':''}">${N}</b>`:''}</button>`:`<span class="m-chip">${ic('grid',12,1.8)}${c.tag}</span>`}</div>`;
+    const hero=c.hero?`<div class="m-hero"><p class="m-sub" style="color:#E8B64C">${c.hero[0]}</p><p style="font-size:14px;font-weight:600;margin:4px 0 12px;line-height:1.55">${c.hero[1]}</p><button class="m-cta" style="height:32px" data-cat="0">${D.shop}</button></div>`:'';
+    const tabs=`<div class="m-tabs">${keys.map(k=>`<button data-cat="${k}" class="${k===cat?'on':''}">${k==='all'?D.all:c.cats[+k]}</button>`).join('')}</div>`;
     const items=c.layout==='grid'
-      ?`<div class="m-grid">${list.map(i=>`<div><div class="tile${tone(i[6])}">${cart[i[0]]?`<b class="q">${cart[i[0]]}</b>`:''}${ic(i[5],34,1.2)}</div><p class="m-n">${i[1]}</p><div class="flex items-center justify-between" style="margin-top:6px"><span class="m-price">${P(i[3])}</span><button class="m-add" data-add="${i[0]}" aria-label="أضف ${i[1]}">${ic('plus',14,2)}</button></div></div>`).join('')}</div>`
-      :list.map(i=>`<div class="m-row"><div class="tile sm${tone(i[6])}">${ic(i[5],22,1.4)}</div><div class="flex-1 min-w-0"><p class="m-n">${i[1]}</p><p class="m-d">${i[2]}</p><span class="m-price">${P(i[3])}</span></div><div class="flex items-center gap-2">${cart[i[0]]?`<span class="m-q">${cart[i[0]]}</span>`:''}<button class="m-add" data-add="${i[0]}" aria-label="أضف ${i[1]}">${ic('plus',14,2)}</button></div></div>`).join('');
-    return{bar:N?{n:N,label:'عرض السلة',total:P(tot()),go:'checkout'}:null,body:top+hero+tabs+items};
+      ?`<div class="m-grid">${list.map(i=>`<div><div class="tile${tone(i[6])}">${cart[i[0]]?`<b class="q">${cart[i[0]]}</b>`:''}${ic(i[5],34,1.2)}</div><p class="m-n">${i[1]}</p><div class="flex items-center justify-between" style="margin-top:6px"><span class="m-price">${P(i[3])}</span><button class="m-add" data-add="${i[0]}" aria-label="${D.aria[4]} ${i[1]}">${ic('plus',14,2)}</button></div></div>`).join('')}</div>`
+      :list.map(i=>`<div class="m-row"><div class="tile sm${tone(i[6])}">${ic(i[5],22,1.4)}</div><div class="flex-1 min-w-0"><p class="m-n">${i[1]}</p><p class="m-d">${i[2]}</p><span class="m-price">${P(i[3])}</span></div><div class="flex items-center gap-2">${cart[i[0]]?`<span class="m-q">${cart[i[0]]}</span>`:''}<button class="m-add" data-add="${i[0]}" aria-label="${D.aria[4]} ${i[1]}">${ic('plus',14,2)}</button></div></div>`).join('');
+    return{bar:N?{n:N,label:D.view,total:P(tot()),go:'checkout'}:null,body:top+hero+tabs+items};
   }
   const ph=phone(render);
   ph.root.addEventListener('click',e=>{
@@ -448,40 +483,30 @@ function shopDemo(c){
   return ph;
 }
 
-const storeDemo=()=>shopDemo({name:'Atelier',sub:'أهلاً بك',layout:'grid',all:true,cur:'د.أ',pay:true,
-  cats:['ساعات','حقائب','عطور'],hero:['مجموعة الموسم','تصاميم هادئة<br>بجودة تدوم','ساعات'],
-  cta:'تأكيد الطلب',doneT:'تم استلام طلبك',doneS:'سنراسلك بتفاصيل الشحن قريباً',
-  items:[['s1','ساعة كلاسيك','',85,'ساعات','watch','g'],['s2','ساعة رياضية','',70,'ساعات','watch','c'],
-   ['s3','حقيبة جلدية','',120,'حقائب','bag','c'],['s4','حقيبة يد','',95,'حقائب','bag','g'],
-   ['s5','عطر العود','',48,'عطور','bottle','g'],['s6','عطر الورد','',54,'عطور','bottle','c']]});
+const storeDemo=()=>{const D=dm(),s=D.st,n=s.it;return shopDemo({name:'Atelier',layout:'grid',all:true,pay:true,
+  cats:s.cats,hero:s.hero,cta:s.cta,doneT:s.dt,doneS:s.ds,
+  items:[['s1',n[0],'',85,'0','watch','g'],['s2',n[1],'',70,'0','watch','c'],['s3',n[2],'',120,'1','bag','c'],['s4',n[3],'',95,'1','bag','g'],['s5',n[4],'',48,'2','bottle','g'],['s6',n[5],'',54,'2','bottle','c']]})};
 
-const menuDemo=()=>shopDemo({name:'مطعم الديوان',sub:'أهلاً بك',tag:'طاولة 7',layout:'list',all:false,cur:'د.أ',pay:false,
-  cats:['الرئيسية','المقبلات','المشروبات'],note:'سيصل طلبك إلى المطبخ مباشرة',
-  cta:'إرسال الطلب',doneT:'طلبك في الطريق',doneS:'الوقت المتوقع 12 دقيقة',
-  items:[['m1','برجر أنجوس','لحم أنجوس وجبنة شيدر وصوص خاص',7.5,'الرئيسية','food','g'],
-   ['m2','دجاج مشوي','أعشاب طازجة مع خضار موسمية',8,'الرئيسية','food','c'],
-   ['m3','باستا كريمي','صوص كريمة وفطر',6.5,'الرئيسية','food','g'],
-   ['m4','حمص بالطحينة','زيت زيتون بكر',3,'المقبلات','leaf','c'],
-   ['m5','سلطة سيزر','خس رومي وجبن بارميزان',4.5,'المقبلات','leaf','g'],
-   ['m6','قهوة مختصة','تحميص محلي',3,'المشروبات','cup','c'],
-   ['m7','عصير برتقال','طازج بدون سكر',3.5,'المشروبات','drop','g']]});
+const menuDemo=()=>{const m=dm().mn,n=m.it;return shopDemo({name:m.name,tag:m.tag,layout:'list',all:false,pay:false,
+  cats:m.cats,note:m.note,cta:m.cta,doneT:m.dt,doneS:m.ds,
+  items:[['m1',n[0][0],n[0][1],7.5,'0','food','g'],['m2',n[1][0],n[1][1],8,'0','food','c'],['m3',n[2][0],n[2][1],6.5,'0','food','g'],
+   ['m4',n[3][0],n[3][1],3,'1','leaf','c'],['m5',n[4][0],n[4][1],4.5,'1','leaf','g'],['m6',n[5][0],n[5][1],3,'2','cup','c'],['m7',n[6][0],n[6][1],3.5,'2','drop','g']]})};
 
 function siteDemo(){
-  let tab='works';
-  const W=[['هوية مقهى','pen','g'],['متجر أزياء','bag','c'],['تطبيق حجز','grid','c'],['منيو رقمي','cup','g']];
-  const S=[['هوية بصرية متكاملة','من 150 د.أ'],['تصميم واجهات','من 220 د.أ'],['إدارة المحتوى','من 90 د.أ']];
-  const C=[['واتساب','+962 7X XXX XXXX','chat'],['انستغرام','@layan.design','cam'],['البريد','hello@layan.design','mail']];
+  let tab='works';const D=dm(),s=D.si;
+  const W=[[s.works[0],'pen','g'],[s.works[1],'bag','c'],[s.works[2],'grid','c'],[s.works[3],'cup','g']];
+  const C=[[s.ct[0],'+962 7X XXX XXXX','chat'],[s.ct[1],'@layan.design','cam'],[s.ct[2],'hello@layan.design','mail']];
   const nx=`<span style="color:#8A90A8">${ic('next',16,1.6)}</span>`;
   function render(){
     const pane={
       works:`<div class="m-grid">${W.map(w=>`<div><div class="tile${tone(w[2])}">${ic(w[1],30,1.2)}</div><p class="m-n">${w[0]}</p></div>`).join('')}</div>`,
-      svc:S.map(x=>`<div class="m-row"><div class="flex-1"><p class="m-n">${x[0]}</p><span class="m-price" style="display:block;margin-top:3px">${x[1]}</span></div>${nx}</div>`).join(''),
-      contact:C.map(x=>`<div class="m-row"><div class="tile xs c">${ic(x[2],16,1.5)}</div><div class="flex-1 min-w-0"><p class="m-n">${x[0]}</p><p class="m-d" dir="ltr" style="text-align:right">${x[1]}</p></div>${nx}</div>`).join('')
+      svc:s.svc.map(x=>`<div class="m-row"><div class="flex-1"><p class="m-n">${x[0]}</p><span class="m-price" style="display:block;margin-top:3px">${x[1]}</span></div>${nx}</div>`).join(''),
+      contact:C.map(x=>`<div class="m-row"><div class="tile xs c">${ic(x[2],16,1.5)}</div><div class="flex-1 min-w-0"><p class="m-n">${x[0]}</p><p class="m-d" dir="ltr" style="text-align:start">${x[1]}</p></div>${nx}</div>`).join('')
     }[tab];
-    return{bar:null,body:`<div style="text-align:center;padding-top:2px"><div class="avatar"><span>ل</span></div><p class="m-title" style="margin-top:12px">ليان الخطيب</p><p class="m-d" style="margin-top:2px">مصممة هوية بصرية · عمّان</p></div>
-     <div class="stats"><div><b>42</b><span>مشروع</span></div><div><b>8</b><span>سنوات</span></div><div><b>5.0</b><span>تقييم</span></div></div>
-     <div class="flex gap-2" style="margin:14px 0"><button class="m-cta flex-1" data-tab="contact">احجز استشارة</button><button class="m-ghost sq" data-tab="contact" aria-label="رسالة">${ic('chat',16,1.6)}</button></div>
-     <div class="m-tabs eq">${[['works','الأعمال'],['svc','الخدمات'],['contact','تواصل']].map(t=>`<button data-tab="${t[0]}" class="${t[0]===tab?'on':''}">${t[1]}</button>`).join('')}</div>${pane}`};
+    return{bar:null,body:`<div style="text-align:center;padding-top:2px"><div class="avatar"><span>${s.av}</span></div><p class="m-title" style="margin-top:12px">${s.name}</p><p class="m-d" style="margin-top:2px">${s.role}</p></div>
+     <div class="stats"><div><b>42</b><span>${s.stats[0]}</span></div><div><b>8</b><span>${s.stats[1]}</span></div><div><b>5.0</b><span>${s.stats[2]}</span></div></div>
+     <div class="flex gap-2" style="margin:14px 0"><button class="m-cta flex-1" data-tab="contact">${s.cta}</button><button class="m-ghost sq" data-tab="contact" aria-label="${D.aria[5]}">${ic('chat',16,1.6)}</button></div>
+     <div class="m-tabs eq">${[['works',s.tabs[0]],['svc',s.tabs[1]],['contact',s.tabs[2]]].map(t=>`<button data-tab="${t[0]}" class="${t[0]===tab?'on':''}">${t[1]}</button>`).join('')}</div>${pane}`};
   }
   const ph=phone(render);
   ph.root.addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b){tab=b.dataset.tab;ph.paint()}});
@@ -511,5 +536,137 @@ $('#shX').onclick=closeSheet;
 sheet.addEventListener('click',e=>{if(e.target===sheet)closeSheet()});
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!sheet.classList.contains('off'))closeSheet()});
 </script>
+
+<!-- Pegar justo ANTES de </body> / الصقه قبل وسم </body> مباشرة -->
+<style>
+html[dir=ltr] #bar{right:auto;left:0;background-image:linear-gradient(to right,#22D3EE,#E8B64C)}
+html[dir=ltr] .m-icon>svg,html[dir=ltr] .m-row>span>svg{transform:scaleX(-1)}
+#lang{appearance:none;-webkit-appearance:none;cursor:pointer}
+</style>
+<script>
+(function(){
+const S=(t,d,a,b,c,e)=>({t,d,f:[a,b,c,e]});
+const D={
+es:{title:"Vizora — Soluciones de software integrales",desc:"Vizora — tiendas online, páginas personales y sistemas QR inteligentes.",
+nav:["Servicios","Pedir proyecto"],h1:"Impulsamos el crecimiento de tu negocio con soluciones de software integrales",sub:"Tiendas online • Páginas personales • Sistemas QR inteligentes",
+go:["Empieza tu proyecto","Conoce los servicios"],sh:"Tres servicios, cada uno hace una cosa y la hace bien",oh:"Pide tu proyecto",
+op:"Elige el servicio y escribe el nombre de tu proyecto; el mensaje te llega listo en WhatsApp.",ls:"Servicio solicitado",
+f:["Nombre del proyecto","Nombre del cliente","Detalles"],ph:["Ej.: Restaurante Al Diwan","Tu nombre","Colores, referencias, fecha de entrega…"],
+pv:"Vista previa del mensaje que se enviará",send:"Solicitar proyecto",err:"Escribe primero el nombre de tu proyecto.",toast:"Abriendo WhatsApp…",
+rights:"Todos los derechos reservados | Todas las soluciones se desarrollan con esmero.",fab:"Contactar por WhatsApp",wa:"Hola Vizora, quisiera información sobre sus servicios.",
+det:"Ver detalles",live:"La vista previa es interactiva, prueba a tocar dentro del teléfono",pick:"Solicitar este servicio",close:"Cerrar",
+msg:["Hola Vizora, quisiera solicitar un nuevo proyecto:","Servicio","Proyecto","Cliente","Detalles"],short:["Tienda online","Menú QR","Página personal"],
+s:[S("Tiendas online completas","Una tienda completa lista para vender desde el primer día.","Carrito rápido sin registro","Pago contra reembolso y online","Gestión de productos, pedidos e inventario","Diseño adaptable pensado primero para móvil"),
+S("Menús QR digitales inteligentes","El cliente escanea el código, ve el menú y pide al instante.","Secciones y precios actualizados al momento","Código QR listo para imprimir en las mesas","Pedido directo a WhatsApp o a caja","Edita los platos sin reimprimir"),
+S("Webs y páginas personales","Una presencia digital a tu altura que reúne todos tus enlaces.","Una sola página con tus servicios y trabajos","Botones de contacto directo","Alta velocidad y visibilidad en buscadores","Identidad visual que refleja tu personalidad")]},
+ar:{title:"Vizora — حلول برمجية متكاملة",desc:"Vizora — متاجر إلكترونية، صفحات شخصية، وأنظمة QR ذكية.",
+nav:["الخدمات","اطلب مشروعك"],h1:"نُحفّز نمو الأعمال عبر حلول برمجية متكاملة",sub:"متاجر إلكترونية • صفحات شخصية • أنظمة QR ذكية",
+go:["ابدأ مشروعك الآن","تعرّف على الخدمات"],sh:"ثلاث خدمات، كل واحدة تُنجز مهمة واحدة جيداً",oh:"اطلب مشروعك",
+op:"اختر الخدمة واكتب اسم مشروعك، وتصلك الرسالة جاهزة على واتساب.",ls:"الخدمة المطلوبة",
+f:["اسم المشروع","اسم العميل","التفاصيل"],ph:["مثال: مطعم الديوان","اسمك الكريم","ألوان، مراجع، موعد التسليم…"],
+pv:"معاينة الرسالة التي ستُرسل",send:"طلب المشروع",err:"اكتب اسم مشروعك أولاً.",toast:"جارٍ فتح واتساب…",
+rights:"جميع الحقوق محفوظة | جميع الحلول البرمجية تم تطويرها بعناية.",fab:"تواصل عبر واتساب",wa:"مرحباً Vizora، أرغب بالاستفسار عن خدماتكم.",
+det:"عرض التفاصيل",live:"المعاينة تفاعلية، جرّب الضغط داخل الهاتف",pick:"اطلب هذه الخدمة",close:"إغلاق",
+msg:["مرحباً Vizora، أرغب بطلب مشروع جديد:","الخدمة","اسم المشروع","العميل","التفاصيل"],short:["متجر إلكتروني","قائمة QR","صفحة شخصية"],
+s:[S("المتاجر الإلكترونية الشاملة","متجر كامل جاهز للبيع من أول يوم.","سلة مشتريات سريعة بدون تسجيل","دفع عند الاستلام وأونلاين","إدارة المنتجات والطلبات والمخزون","تصميم متجاوب يبدأ من الجوال"),
+S("قوائم QR الرقمية الذكية","يمسح الزبون الرمز فيرى المنيو ويطلب فوراً.","أقسام وأسعار تتحدث لحظياً","رمز QR جاهز للطباعة على الطاولات","طلب مباشر إلى الواتساب أو الكاشير","تعديل الأصناف دون إعادة طباعة"),
+S("المواقع والصفحات الشخصية","حضور رقمي يليق بك ويجمع كل روابطك.","صفحة واحدة تجمع خدماتك وأعمالك","أزرار تواصل مباشرة","سرعة عالية وظهور في البحث","هوية بصرية تعكس شخصيتك")]},
+en:{title:"Vizora — Complete Software Solutions",desc:"Vizora — online stores, personal pages and smart QR systems.",
+nav:["Services","Order a project"],h1:"We fuel business growth with complete software solutions",sub:"Online stores • Personal pages • Smart QR systems",
+go:["Start your project now","Explore the services"],sh:"Three services, each doing one job well",oh:"Order your project",
+op:"Pick a service and type your project name, and the message arrives ready on WhatsApp.",ls:"Service needed",
+f:["Project name","Client name","Details"],ph:["e.g. Al Diwan Restaurant","Your name","Colors, references, delivery date…"],
+pv:"Preview of the message that will be sent",send:"Request project",err:"Please enter your project name first.",toast:"Opening WhatsApp…",
+rights:"All rights reserved | All software solutions are built with care.",fab:"Contact via WhatsApp",wa:"Hello Vizora, I’d like to ask about your services.",
+det:"View details",live:"The preview is interactive, try tapping inside the phone",pick:"Order this service",close:"Close",
+msg:["Hello Vizora, I’d like to order a new project:","Service","Project","Client","Details"],short:["Online store","QR menu","Personal page"],
+s:[S("Complete E-Commerce Stores","A full store, ready to sell from day one.","Fast cart with no sign-up","Cash on delivery and online payment","Manage products, orders and inventory","Responsive, mobile-first design"),
+S("Smart Digital QR Menus","Customers scan the code, see the menu and order instantly.","Sections and prices that update live","Print-ready QR code for your tables","Orders sent straight to WhatsApp or the cashier","Edit items without reprinting"),
+S("Websites & Personal Pages","A digital presence worthy of you, gathering all your links.","One page for your services and work","Direct contact buttons","Fast loading and search visibility","A visual identity that reflects you")]},
+de:{title:"Vizora — Umfassende Softwarelösungen",desc:"Vizora — Online-Shops, persönliche Seiten und intelligente QR-Systeme.",
+nav:["Leistungen","Projekt anfragen"],h1:"Wir treiben Ihr Geschäftswachstum mit umfassenden Softwarelösungen voran",sub:"Online-Shops • Persönliche Seiten • Intelligente QR-Systeme",
+go:["Jetzt Projekt starten","Leistungen entdecken"],sh:"Drei Leistungen, jede erledigt eine Aufgabe richtig gut",oh:"Projekt anfragen",
+op:"Wählen Sie die Leistung und tragen Sie Ihren Projektnamen ein – die Nachricht landet fertig auf WhatsApp.",ls:"Gewünschte Leistung",
+f:["Projektname","Kundenname","Details"],ph:["z. B. Restaurant Al Diwan","Ihr Name","Farben, Referenzen, Liefertermin…"],
+pv:"Vorschau der Nachricht, die gesendet wird",send:"Projekt anfragen",err:"Bitte geben Sie zuerst Ihren Projektnamen ein.",toast:"WhatsApp wird geöffnet…",
+rights:"Alle Rechte vorbehalten | Alle Softwarelösungen werden mit Sorgfalt entwickelt.",fab:"Per WhatsApp kontaktieren",wa:"Hallo Vizora, ich hätte gern Informationen zu Ihren Leistungen.",
+det:"Details ansehen",live:"Die Vorschau ist interaktiv – tippen Sie im Smartphone herum",pick:"Diese Leistung anfragen",close:"Schließen",
+msg:["Hallo Vizora, ich möchte ein neues Projekt anfragen:","Leistung","Projekt","Kunde","Details"],short:["Online-Shop","QR-Menü","Persönliche Seite"],
+s:[S("Komplette Online-Shops","Ein vollständiger Shop, der vom ersten Tag an verkaufsbereit ist.","Schneller Warenkorb ohne Registrierung","Barzahlung bei Lieferung und Online-Zahlung","Verwaltung von Produkten, Bestellungen und Lagerbestand","Responsives Design nach dem Mobile-first-Prinzip"),
+S("Intelligente digitale QR-Menüs","Gäste scannen den Code, sehen die Karte und bestellen sofort.","Kategorien und Preise in Echtzeit aktualisiert","Druckfertiger QR-Code für die Tische","Bestellung direkt an WhatsApp oder die Kasse","Gerichte ändern ohne Neudruck"),
+S("Websites & persönliche Seiten","Ein digitaler Auftritt, der zu Ihnen passt und alle Ihre Links bündelt.","Eine Seite für Ihre Leistungen und Arbeiten","Direkte Kontaktbuttons","Hohe Geschwindigkeit und Sichtbarkeit in der Suche","Eine visuelle Identität, die Ihre Persönlichkeit widerspiegelt")]},
+fr:{title:"Vizora — Solutions logicielles intégrées",desc:"Vizora — boutiques en ligne, pages personnelles et systèmes QR intelligents.",
+nav:["Services","Commander un projet"],h1:"Nous stimulons la croissance de votre activité grâce à des solutions logicielles intégrées",sub:"Boutiques en ligne • Pages personnelles • Systèmes QR intelligents",
+go:["Lancez votre projet","Découvrir les services"],sh:"Trois services, chacun fait une chose et la fait bien",oh:"Commandez votre projet",
+op:"Choisissez le service et saisissez le nom de votre projet : le message arrive prêt sur WhatsApp.",ls:"Service souhaité",
+f:["Nom du projet","Nom du client","Détails"],ph:["Ex. : Restaurant Al Diwan","Votre nom","Couleurs, références, date de livraison…"],
+pv:"Aperçu du message qui sera envoyé",send:"Demander le projet",err:"Saisissez d’abord le nom de votre projet.",toast:"Ouverture de WhatsApp…",
+rights:"Tous droits réservés | Toutes les solutions logicielles sont développées avec soin.",fab:"Contacter via WhatsApp",wa:"Bonjour Vizora, je souhaite me renseigner sur vos services.",
+det:"Voir les détails",live:"L’aperçu est interactif, essayez de toucher à l’intérieur du téléphone",pick:"Commander ce service",close:"Fermer",
+msg:["Bonjour Vizora, je souhaite commander un nouveau projet :","Service","Projet","Client","Détails"],short:["Boutique en ligne","Menu QR","Page personnelle"],
+s:[S("Boutiques en ligne complètes","Une boutique complète, prête à vendre dès le premier jour.","Panier rapide sans inscription","Paiement à la livraison et en ligne","Gestion des produits, commandes et stocks","Design adaptatif pensé d’abord pour le mobile"),
+S("Menus QR numériques intelligents","Le client scanne le code, voit le menu et commande aussitôt.","Rubriques et prix mis à jour en direct","Code QR prêt à imprimer pour les tables","Commande directe vers WhatsApp ou la caisse","Modifiez les plats sans réimprimer"),
+S("Sites et pages personnelles","Une présence numérique à votre mesure qui réunit tous vos liens.","Une seule page pour vos services et réalisations","Boutons de contact direct","Grande rapidité et visibilité dans les recherches","Une identité visuelle qui reflète votre personnalité")]}
+};
+const NAMES={es:"Español",ar:"العربية",en:"English",de:"Deutsch",fr:"Français"},KEYS=["store","menu","site"];
+let cur="es";try{const v=localStorage.getItem("vz_lang");if(D[v])cur=v}catch(e){}
+const T=()=>D[cur];
+const msg=()=>{const m=T().msg;return[m[0],"- "+m[1]+": "+SVC[sel].t,"- "+m[2]+": "+(val("#fProj")||"—"),"- "+m[3]+": "+(val("#fName")||"—"),"- "+m[4]+": "+(val("#fNote")||"—")].join("\n")};
+
+/* language switcher */
+const lg=document.createElement("select");lg.id="lg";lg.setAttribute("aria-label","Language");
+lg.className="h-9 rounded-full bg-white/5 border border-white/10 text-xs px-3 text-ink mx-1";
+lg.innerHTML=Object.keys(NAMES).map(k=>`<option value="${k}" style="background:#0B0D14">${NAMES[k]}</option>`).join("");
+const box=$("#nav .flex.items-center.gap-1");box.prepend(lg);
+const svcLink=$('#nav a[href="#services"]');svcLink.classList.remove("grid");svcLink.classList.add("hidden","sm:grid");
+
+function apply(){
+  const t=T(),h=document.documentElement;
+  h.lang=cur;h.dir=cur==="ar"?"rtl":"ltr";lg.value=cur;
+  document.title=t.title;$('meta[name=description]').content=t.desc;
+  const a=$$("#nav a");a[1].textContent=t.nav[0];a[2].textContent=t.nav[1];
+  $("#heroSec h1").textContent=t.h1;$("#heroSec>p").textContent=t.sub;
+  const hb=$$('#heroSec a[href^="#"]');hb[0].textContent=t.go[0];hb[1].textContent=t.go[1];
+  $("#services h2").textContent=t.sh;$("#order h2").textContent=t.oh;$("#order>p").textContent=t.op;
+  $("#lblSvc").textContent=t.ls;
+  ["#fProj","#fName","#fNote"].forEach((q,i)=>{const e=$(q);e.parentNode.firstChild.textContent=t.f[i]+" ";e.placeholder=t.ph[i]});
+  $("#prev").previousElementSibling.textContent=t.pv;
+  $("#send").lastChild.textContent=" "+t.send;
+  $("#err").classList.add("hidden");
+  $$("footer p")[1].innerHTML='© <span id="yr">'+new Date().getFullYear()+"</span> Vizora. "+t.rights;
+  $("#fab").setAttribute("aria-label",t.fab);$("#fab").href=waUrl(t.wa);
+  $("#shX").setAttribute("aria-label",t.close);
+  KEYS.forEach((k,i)=>{
+    Object.assign(SVC[k],{t:t.s[i].t,d:t.s[i].d,f:t.s[i].f});SHORT[k]=t.short[i];
+    const c=$$("#cards article")[i];
+    c.querySelector("h3").textContent=t.s[i].t;c.querySelector("p.flex-1").textContent=t.s[i].d;c.querySelector("button").textContent=t.det;
+  });
+  chips();$("#prev").textContent=msg();
+  try{localStorage.setItem("vz_lang",cur)}catch(e){}
+}
+lg.addEventListener("change",()=>{cur=lg.value;apply()});
+
+/* keep preview in the chosen language */
+new MutationObserver(()=>{const m=msg();if($("#prev").textContent!==m)$("#prev").textContent=m})
+  .observe($("#prev"),{childList:true,characterData:true,subtree:true});
+
+/* send button (runs before the original handler) */
+$("#send").addEventListener("click",e=>{
+  e.stopImmediatePropagation();
+  const er=$("#err");
+  if(!val("#fProj")){er.textContent=T().err;er.classList.remove("hidden");return $("#fProj").focus()}
+  er.classList.add("hidden");openWa(msg());toast(T().toast);
+},true);
+
+/* details sheet texts */
+new MutationObserver(()=>{
+  const p=$("#pick");if(p)p.textContent=T().pick;
+  const l=$("#shB .live");if(l)l.parentElement.lastChild.textContent=T().live;
+}).observe($("#shB"),{childList:true});
+
+apply();
+})();
+</script>
+
 </body>
 </html>
